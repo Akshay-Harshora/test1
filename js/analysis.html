@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css//analysis.css">
+
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        let menustate = 0;
+        function openclose() {
+            let menu = document.getElementById("mysidebar");
+            let analysis = document.getElementById("mainanalysisid");
+            console.log(menu);
+            //console.log(menu.classList);
+
+            if (menustate == 0) {
+                menustate = 1;
+                if (menu.classList.contains("mysidebar2") || analysis.classList.contains("analysis2")) {
+                    menu.classList.remove("mysidebar2");
+                    analysis.classList.remove("analysis2");
+                }
+                menu.classList.add("mysidebar1");
+                analysis.classList.add("analysis1");
+            }
+            else {
+                menustate = 0;
+                if (menu.classList.contains("mysidebar1") || analysis.classList.contains("analysis1")) {
+                    menu.classList.remove("mysidebar1");
+                    analysis.classList.remove("analysis1");
+                }
+                menu.classList.add("mysidebar2");
+                analysis.classList.add("analysis2");
+            }
+        }
+        function openclose1() {
+            let menu = document.getElementById("mysidebar");
+            let analysis = document.getElementById("mainanalysisid");
+            console.log(menu);
+            // console.log(menu.classList);
+
+
+            if (menu.classList.contains("mysidebar2") || analysis.classList.contains("analysis2")) {
+                menu.classList.remove("mysidebar2");
+                analysis.classList.remove("analysis2");
+            }
+            menu.classList.add("mysidebar1");
+            analysis.classList.add("analysis1");
+            
+
+        }
+        function tab1click()
+        {
+           
+                let tab1 = document.getElementById("tab1open")
+                let tab2 = document.getElementById("tab2open")
+                let tab3 = document.getElementById("tab3open")
+
+                let tablink1 = document.getElementById("tab1")
+
+                let tablink2 = document.getElementById("tab2")
+                let tablink3 = document.getElementById("tab3")
+                
+                if(tab2.classList.contains('tab2display') || tab3.classList.contains('tab3display'))
+                {
+                    tab2.classList.remove("tab2display");
+                    tab3.classList.remove("tab3display");
+                    
+                }
+                tab1.classList.add("tab1display")
+                
+                tab2.classList.add("tab2remove")
+                tab3.classList.add("tab3remove")
+                tablink1.classList.add("tabred");
+                tablink1.classList.remove("tabwhite");
+
+                tablink2.classList.remove("tabred");
+                tablink3.classList.remove("tabred");
+    
+                              
+                
+        }
+        function tab2click()
+        {
+           
+                let tab1 = document.getElementById("tab1open")
+                let tab2 = document.getElementById("tab2open")
+                let tab3 = document.getElementById("tab3open")
+                let tablink1 = document.getElementById("tab1")
+
+                let tablink2 = document.getElementById("tab2")
+                let tablink3 = document.getElementById("tab3")
+                if(tab1.classList.contains('tab1display') || tab3.classList.contains('tab3display'))
+                {
+                    tab1.classList.remove("tab1display");
+                    tab3.classList.remove("tab3display");
+                    
+                }
+                tablink1.classList.remove("defaultred")
+                tablink1.classList.add("tabwhite");
+                tab2.classList.add("tab2display")
+                tab1.classList.add("tab1remove")
+                tab3.classList.add("tab3remove")
+                tab2.classList.remove("tab2hidden")
+                tablink1.classList.remove("tabred");
+                tablink2.classList.add("tabred");
+                tablink3.classList.remove("tabred");
+  
+                
+        }
+        function tab3click()
+        {
+            
+                let tab1 = document.getElementById("tab1open")
+                let tab2 = document.getElementById("tab2open")
+                let tab3 = document.getElementById("tab3open")
+                let tablink1 = document.getElementById("tab1")
+
+                let tablink2 = document.getElementById("tab2")
+                let tablink3 = document.getElementById("tab3")
+                if(tab1.classList.contains('tab1display') || tab2.classList.contains('tab2display'))
+                {
+                    tab1.classList.remove("tab1display");
+                    tab2.classList.remove("tab2display");
+                    
+                }
+                tablink1.classList.remove("defaultred")
+                tablink1.classList.add("tabwhite");
+                tab3.classList.add("tab3display")
+                tab1.classList.add("tab1remove")
+                tab2.classList.add("tab2remove")
+                tab3.classList.remove("tab3hidden") 
+                tablink1.classList.remove("tabred");
+                tablink2.classList.remove("tabred");
+                tablink3.classList.add("tabred");
+               
+                
+
+        }
+    </script>
+    <div class="topnavbar">
+        <div class="topleftnavbar">
+            <a onclick="openclose()" style="cursor:pointer"><img src="../images/menu-bar.svg" class="menudesign" width="30px"
+                    height="24px"></a>
+            <!-- <img src="../images/header-logo.svg" class="logo" width="142px" height="30px"> -->
+
+            <img src="../images/logo.svg" alt="logo" class="logo">
+            <img src="../images/mobile-header-logo.svg" alt="logo" class="logo-mobile" style="display: none;">
+            <img src="../images//search-icon.svg" class="searchicon">
+            <input type="text" class="form-control searchwidth" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Search" class="form-control" width="49px" height="21px"
+                style="margin-top:30px;margin-left: 15px;">
+
+
+        </div>
+        <div class="toprightnavbar">
+            <div class="dropdown">
+                <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    style="border:none;background-color: #FFFF;width: 26px;height: 26px;">
+                    <img src="../images/notification-icon.svg" class="notification">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Akshay Harshora</a></li>
+
+                </ul>
+            </div>
+            <img src="../images/profile.png" class="profile">
+            <select class="dropdesign">
+                <option value="John Doe">John Doe</option>
+            </select>
+
+        </div>
+    </div>
+
+    <div class="sidebar" id="mysidebar">
+        <div class="eachsidemenu" id="dashmenu"><a href="../js/dashboard.html" class="link">
+                <div style="display: flex;">
+                    <img src="../images/dashboard-default.svg" width="16px" height="16px"
+                        style="margin-left:47px;margin-top: 3px;"><span style="margin-left: 12px;">Dashboard</span>
+                </div>
+            </a></div>
+        <div class="eachsidemenu" style="padding-top:17px;" id="analysismenu"><a href="../js/analysis.html" class="link"
+                target="_top">
+                <div style="display: flex;background-color:#FFF3F4;padding:15px;margin-left: 30px;margin-right:30px;"
+                    id="analysislink"><img src="../images/graph-active.svg" width="16px" height="16px"
+                        style="margin-top: 2px"><span style="margin-left: 12px;color:#C8242F;">Analysis</span></div>
+            </a></div>
+        <div class="eachsidemenu" id="inboxdesign" style="padding-top:17px"><a href="#" class="link">
+                <div style="display: flex;"><img src="../images/inbox-default.svg" width="16px" height="16px"
+                        style="margin-left: 47px;margin-top: 3px;"><span style="margin-left: 12px;">Inbox</span></div>
+            </a></div>
+        <div class="eachsidemenu"><a href="#" class="link">
+                <div style="display: flex;"><img src="../images/clock-default.svg" width="16px" height="16px"
+                        style="margin-left: 47px;margin-top: 2.6px;"><span style="margin-left: 12px;">History</span>
+                </div>
+            </a></div>
+        <div class="eachsidemenu"><a href="#" class="link">
+                <div style="display: flex;"><img src="../images//user-default.svg" width="16px" height="16px"
+                        style="margin-left: 47px;margin-top: 2px;"><span style="margin-left: 12px;">Users</span></div>
+            </a></div>
+        <div class="eachsidemenu"><a href="#" class="link">
+                <div style="display: flex;"><img src="../images/maintenance-default.svg" width="16px" height="16px"
+                        style="margin-left: 47px;margin-top: 2px;"><span style="margin-left: 12px;">Maintenance</span>
+                </div>
+            </a></div>
+        <div class="eachsidemenu"><a href="#" class="link">
+                <div style="display: flex;"><img src="../images/setting-default.svg" width="16px" height="16px"
+                        style="margin-left: 47px;margin-top: 2px;"><span style="margin-left: 12px;">Setting</span></div>
+            </a></div>
+    </div>
+    <a onclick="openclose1()">
+        <div class="mainanalysis" id="mainanalysisid">
+            <p class="analysis">Analysis</p>
+            <div class="formdesign">
+                <p class="onecolumn">One Column</p>
+                <!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Name"> -->
+                <div class="input-contain">
+                    <input type="text" id="firstinput" name="fname" value="" aria-labelledby="placeholder-fname"
+                        autocomplete="off">
+                    <label class="placeholder-text" for="fname" id="placeholder-fname">
+                        <div class="text">Name</div>
+                    </label>
+                </div>
+                <select class="form-select" placeholder="Dropdown"
+                    style="margin-top: 20px!important;color:#ADADAD;font-size: 18px;">
+                    <option selected>Dropdown</option>
+                    <!-- <option>Dropdown</option> -->
+                </select>
+                <textarea class="form-control1" id="exampleFormControlTextarea1" rows="3"
+                    style="height:130px;width:1157px;margin-top: 20px!important;padding-left:12px;font-size:18px;padding-top:12px"
+                    placeholder="Multiple line"></textarea>
+                <p class="twocolumn">Two Column</p>
+                <div style="display: flex;margin-top:16px" class="twocolumnflex">
+                    <!-- <div>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Name" style="width:563px;height:49px;margin-top: 0px!important" >
+                </div> -->
+                    <div class="input-contain2">
+                        <input type="text" id="firstinput2" name="fname" value="" aria-labelledby="placeholder-fname"
+                            autocomplete="off">
+                        <label class="placeholder-text" for="fname" id="placeholder-fname">
+                            <div class="text">Name</div>
+                        </label>
+                    </div>
+                    <!-- <div>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Username" style="width:563px;height:49px;margin-top: 0px!important">
+                </div> -->
+                    <div class="input-contain5">
+                        <input type="text" id="firstinput5" name="fname" value="johndoe"
+                            aria-labelledby="placeholder-fname" autocomplete="off">
+                        <label class="placeholder-text" for="fname" id="placeholder-fname">
+                            <div class="text">Username</div>
+                        </label>
+                    </div>
+
+                </div>
+                <div style="display: flex;margin-top:20px" class="twopassword">
+                    <div class="input-contain6">
+                        <input type="password" id="firstinput6" name="fname" value=""
+                            aria-labelledby="placeholder-fname" autocomplete="off">
+                        <label class="placeholder-text" for="fname" id="placeholder-fname">
+                            <div class="text">Password</div>
+                        </label>
+                    </div>
+                    <div>
+                        <select class="form-select dropdownmargin twodrop" placeholder="Dropdown"
+                            style="width:563px;height:49px;color:#ADADAD">
+                            <option selected>Dropdown</option>
+                        </select>
+                    </div>
+                </div>
+                <p class="threecolumn">Three Column</p>
+                <div style="display:flex;margin-top:16px;" class="threecolumnwidth">
+                    <div class="input-contain3">
+                        <input type="text" id="firstinput3" name="fname" value="" aria-labelledby="placeholder-fname"
+                            autocomplete="off" autofocus="autofocus">
+                        <label class="placeholder-text" for="fname" id="placeholder-fname">
+                            <div class="text">Focus</div>
+                        </label>
+                    </div>
+                    <div class="input-contain7">
+                        <input type="password" id="firstinput7" name="fname" value="123456789"
+                            aria-labelledby="placeholder-fname" autocomplete="off">
+                        <label class="placeholder-text" for="fname" id="placeholder-fname">
+                            <div class="text">Password</div>
+                        </label>
+                    </div>
+                    <div class="input-contain3">
+                        <input type="text" id="firstinput3" name="fname" value="johndoe"
+                            aria-labelledby="placeholder-fname" style="border: 1px dashed #ADADAD!important;"
+                            autocomplete="off" disabled>
+                        <label class="placeholder-text" for="fname" id="placeholder-fname">
+                            <div class="text"><span style="color:#ADADAD">Disabled</span></div>
+                        </label>
+                    </div>
+                </div>
+                <p class="threecolumn">Four Column</p>
+                <div style="display:flex;margin-top:16px;" class="fourcolumnwidth">
+                    <div class="input-contain4">
+                        <input type="text" class="" id="firstinput4" name="fname" value="UI Designer"
+                            aria-labelledby="placeholder-fname" autocomplete="off" autofocus="autofocus">
+                        <label class="placeholder-text" for="fname" id="placeholder-fname">
+                            <div class="text"><span style="color:#FF3B3B">Designation</span></div>
+                        </label>
+                    </div>
+
+                    <div class="input-contain8">
+                        <input type="text" id="firstinput8" name="fname" value="" aria-labelledby="placeholder-fname"
+                            autocomplete="off">
+                        <label class="placeholder-text" for="fname" id="placeholder-fname">
+                            <div class="text">Name</div>
+                        </label>
+                    </div>
+                    <div class="input-contain9">
+                        <input type="text" id="firstinput9" name="fname" value="johndoe"
+                            aria-labelledby="placeholder-fname" autocomplete="off">
+                        <label class="placeholder-text" for="fname" id="placeholder-fname">
+                            <div class="text">Username</div>
+                        </label>
+                    </div>
+                    <div>
+                        <select class="form-select dropdownmargin fourdrop" placeholder="Dropdown"
+                            style="width:266px;height:49px;margin-top: 0px;color:#ADADAD">
+                            <option selected>Dropdown</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- <div style="display: flex;">
+            <p style="margin-left:47px;margin-top:10px;margin-bottom:0px!important;color:#FF3B3B;font-size:12px;font-weight:400!important">Enter valid data</p>
+              <p style="margin-top:10px;margin-bottom:0px!important;margin-left:211px;font-size:12px;font-weight:400!important;">Enter your full Name as per ID</p>
+            </div> -->
+                <p class="threecolumn">Other Design Elements</p>
+
+                <p class="filetext">File Upload</p>
+                <!-- <div style="display:flex;margin-top:16px;"> -->
+                <!-- <label for="myfile" class="btn">Select Image</label> -->
+
+                <input type="file" id="myfile" name="myfile" class="filedesign">
+                <label for="myfile" class="forfile">
+                    <div style="display: flex;align-items: center;">
+                        <div class="Upload"><img src="../images/cloud-upload-icon.svg" style="margin-right: 5px;"
+                                width="24px" height="24px">Upload</div>
+                        <div style="margin-left: 20px;margin-top: 22px;pointer-events: none;">No item Selected</div>
+                    </div>
+                </label>
+
+                <p class="radiotext">Radio Button</p>
+                <div style="display: flex;margin-top: 16px;margin-left: 29px;">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="option1" id="opt1" value="opt1">
+                        <label class="form-check-label" for="opt1">
+                            Option 1
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline" style="margin-left:38px">
+                        <input type="radio" name="option1" id="opt2" value="opt2" checked>
+                        <label class="form-check-label" for="opt2">
+                            Option 2
+                        </label>
+                    </div>
+                </div>
+                <p class="radiotext">Checkbox</p>
+                <div style="display: flex;margin-top: 16px;margin-left: 29px;">
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" name="checkbox1" id="checkbox1" value="checkbox1" checked>
+
+                        <label class="form-check-label" for="checkbox1">
+                            Option 1
+                        </label>
+                    </div>
+                    <div class="form-check" style="margin-left:38px">
+                        <input type="checkbox" name="checkbox2" id="checkbox2" value="checkbox2" checked>
+
+                        <label class="form-check-label" for="checkbox22">
+                            Option 2
+                        </label>
+                    </div>
+                </div>
+                <p class="radiotext">Snackbar</p>
+                <div style="display: flex;" class="snack1">
+                    <div class="errormsg" style="margin-top:16px;width:563px;height:44px;display: flex;align-items: center;margin-left: 29px;border: 1px solid #FF3535;
+                border-radius: 5px;"><img src="../images/error-icon.svg" width="24px" height="24px"
+                            style="margin-left: 10px;margin-right: 10px;"><span style="font-size: 18px;">This is an
+                            error
+                            Message!</span></div>
+                    <div class="infomsg" style="margin-left:33px;margin-top: 16px;width: 563px;height: 44px;display: flex;align-items: center;border: 1px solid #00B9E1;
+                border-radius: 5px;"><img src="../images/info-icon.svg" width="24px" height="24px"
+                            style="margin-left: 10px;margin-right: 10px;"><span style="font-size: 18px;">This is an
+                            information message!</span></div>
+                </div>
+                <div style="display: flex;" class="snack2">
+                    <div class="warnmsg" style="margin-top: 25px;width:563px;height:44px;display: flex;align-items: center;margin-left: 29px;border: 1px solid #FFA800;
+                border-radius: 5px;"><img src="../images/warning-icon.svg" width="24px" height="24px"
+                            style="margin-left: 10px;margin-right: 10px;"><span style="font-size: 18px;">This is a
+                            warning
+                            message!</span></div>
+                    <div class="successmsg" style="margin-left: 33px;margin-top: 25px;width:563px;height:44px;display: flex;align-items: center;border: 1px solid #00AF27;
+                border-radius: 5px;"><img src="../images/success-icon.svg" width="24px" height="24px"
+                            style="margin-left: 10px;margin-right: 10px;"><span style="font-size: 18px;">This is a
+                            Success
+                            message!</span></div>
+                </div>
+                <p class="radiotext">Call to action</p>
+                <button
+                    style="border-radius:23px;background-color: #C8242F;color:#FFFF;width: 124px;height: 45px;margin-left: 29px;border: none;margin-top: 15px;"
+                    class="family">Primary</button>
+                <button
+                    style="border-radius:23px;background-color: #FFFF;color:#C8242F;width: 145px;height: 45px;margin-left: 21px;border: 1px solid #C8242F;margin-top: 15px;"
+                    class="family">Secondary</button>
+                <p class="radiotext">Tabs</p>
+                <div style="display: flex;border-bottom: 1px solid #ADADAD;margin-left: 29px;margin-right: 29px;padding-bottom: 13px;margin-top: 21px;"
+                    class="tabwidth">
+                    <div><a style="text-decoration: none;font-size: 15px;cursor: pointer;" id = "tab1" onclick="tab1click()" class = "defaultred">Tab 1</a></div>
+                    <div style="margin-left:36px;"><a
+                            style="text-decoration: none;font-size: 15px;cursor: pointer;color: #ADADAD" id="tab2" onclick="tab2click()">Tab 2</a></div>
+                    <div style="margin-left:36px;"><a style="text-decoration: none;font-size: 15px;cursor: pointer;color: #ADADAD" id = "tab3" onclick = "tab3click()">Tab 3</a></div>
+                </div>
+                <div style="margin-top:27px;margin-left: 29px;padding-bottom: 36px;font-size: 15px;font-weight: 400;"
+                    class="tabwidthcontent" id = "tab1open">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing
+                </div>
+                <div style="margin-top:27px;margin-left: 29px;padding-bottom: 36px;font-size: 15px;font-weight: 400;"
+                    class="tabwidthcontent tab2hidden" id = "tab2open">
+                    akshay
+                </div>
+                <div style="margin-top:27px;margin-left: 29px;padding-bottom: 36px;font-size: 15px;font-weight: 400;"
+                    class="tabwidthconten tab3hidden" id = "tab3open">
+                   harshora
+                   <!-- //sdfg -->
+                </div>
+            </div>
+        </div>
+    </a>
+    </div>
+    <script type="text/javascript">
+        let input_element = document.getElementById("firstinput");
+        let input_element2 = document.getElementById("firstinput2");
+        let input_element3 = document.getElementById("firstinput3");
+        let input_element4 = document.getElementById("firstinput4");
+        let input_element5 = document.getElementById("firstinput5");
+        let input_element6 = document.getElementById("firstinput6");
+        let input_element7 = document.getElementById("firstinput7");
+        let input_element8 = document.getElementById("firstinput8");
+        let input_element9 = document.getElementById("firstinput9");
+
+        input_element.addEventListener("keyup", () => {
+            input_element.setAttribute("value", input_element.value);
+
+        })
+        input_element2.addEventListener("keyup", () => {
+            input_element2.setAttribute("value", input_element2.value);
+
+        })
+        input_element3.addEventListener("keyup", () => {
+            input_element3.setAttribute("value", input_element3.value);
+
+        })
+        input_element4.addEventListener("keyup", () => {
+            input_element4.setAttribute("value", input_element4.value);
+
+        })
+        input_element5.addEventListener("keyup", () => {
+            input_element5.setAttribute("value", input_element5.value);
+
+        })
+        input_element6.addEventListener("keyup", () => {
+            input_element6.setAttribute("value", input_element6.value);
+
+        })
+        input_element7.addEventListener("keyup", () => {
+            input_element7.setAttribute("value", input_element7.value);
+
+        })
+        input_element8.addEventListener("keyup", () => {
+            input_element8.setAttribute("value", input_element8.value);
+
+        })
+        input_element9.addEventListener("keyup", () => {
+            input_element9.setAttribute("value", input_element9.value);
+
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

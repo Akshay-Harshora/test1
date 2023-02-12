@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400&display=swap');
+*
+{
+    margin:0;
+    padding: 0;
+}
+.imagestyle {
+    border-radius: 50%;
+    box-shadow: 0px 4px 31px #0000000A;
+    border: 20px solid #FFFFFF;
+    width:576px; 
+    height:576px;
+}
+
+body {
+    background-color: #FAFAFA!important;
+
+
+}
+.maincontainer
+{
+    width:1560px;
+    height:720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.companycontentdesign {
+    margin-top: 19px;
+    letter-spacing: 0px;
+    font-size: 40px;
+    margin-left: 163px;
+    
+    font-family: 'Roboto';
+    font-weight: 300;
+    margin-bottom:0px!important;
+    
+}
+
+.imagelogodesign {
+    margin-left: 164px;
+    width : 272px;
+    height : 58px;
+}
+
+.logintext {
+    margin-left: 163px;
+    font-size: 25px;
+    margin-top: 32px;
+    font-family: 'Roboto';
+    font-weight:400;
+    margin-bottom: 0px!important;
+}
+
+.form-control {
+    width: 429px !important;
+    height: 49px;
+    margin-left: 163px;
+    margin-top: 23px;
+    border: 1px solid #ADADAD!important;
+    border-radius: 5px!important;
+}
+
+.passworddesign {
+    width: 429px !important;
+    margin-top: 27px !important;
+    height: 49px !important;
+    border: 1px solid #ADADAD!important;
+    border-radius: 5px!important;
+}
+
+.buttondesign {
+    border-radius: 23px;
+    margin-left: 163px;
+    margin-top: 30px;
+    width: 138px;
+    height: 45px;
+    background: #C8242F;
+    color: #FFFFFF;
+    border: none;
+    font-size: 18px;
+    opacity: 1;
+    font-family: 'Roboto';
+    font-weight:500;
+}
+
+.forgotdesign {
+    color: #ADADAD;
+    font-size: 15px;
+    margin-top: 43px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    margin-bottom: 0px!important;
+}
+
+.bottomformflex {
+    width: 592px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rowdesign {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.bottommostparagraphdesign {
+    font-size: 15px;
+    color: #ADADAD;
+    margin-top: 34px;
+    margin-left: 163px;
+    font-family: 'Roboto';
+    font-weight:400;
+    margin-bottom: 0px!important;
+}
+
+.bottomspan {
+    color: #C8242F;
+
+}
+
+ @media screen and (max-width: 1023px) {
+    .companycontentdesign {
+        margin-top: 19px;
+        letter-spacing: 0px;
+        font-size: 43px;
+        margin-left: 163px;
+        
+        font-family: 'Roboto';
+        font-weight: 300;
+        margin-bottom:0px!important;
+        
+    }
+    .logintext {
+        margin-left: 163px;
+        font-size: 30px;
+        margin-top: 32px;
+        font-family: 'Roboto';
+        font-weight:400;
+        margin-bottom: 0px!important;
+    }
+    .buttondesign {
+        border-radius: 23px;
+        margin-left: 163px;
+        margin-top: 30px;
+        width: 138px;
+        height: 45px;
+        background: #C8242F;
+        color: #FFFFFF;
+        border: none;
+        font-size: 21px;
+        opacity: 1;
+        font-family: 'Roboto';
+        font-weight:500;
+    }
+    .forgotdesign {
+        color: #ADADAD;
+        font-size: 21px;
+        margin-top: 43px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        margin-bottom: 0px!important;
+    }
+    .bottommostparagraphdesign {
+        font-size: 21px;
+        color: #ADADAD;
+        margin-top: 34px;
+        margin-left: 163px;
+        font-family: 'Roboto';
+        font-weight:400;
+        margin-bottom: 0px!important;
+    }
+    .imagelogodesign {
+        margin-left: 164px;
+        width : 275px;
+        height : 61px;
+    }
+    .form-control
+    {
+        font-size: 21px!important;
+        
+    }   
+
+}
+
+@media screen and (min-width:1024px) and (max-width: 1439px) {
+    .bottomformflex {
+        width: 509px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .companycontentdesign {
+        margin-top: 10px;
+        letter-spacing: 0px;
+        font-size: 25px;
+        margin-left: 80px;
+        font-family: Roboto;
+        font-weight: 300;
+        margin-bottom: 0px !important;
+    }
+    .logintext {
+        margin-left: 80px;
+        font-size: 21px;
+        margin-top: 8px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        margin-bottom: 0px!important;
+    }
+    .buttondesign {
+        border-radius: 23px;
+        margin-left: 80px;
+        margin-top: 18px;
+        width: 138px;
+        height: 45px;
+        background: #C8242F;
+        color: #FFFFFF;
+        border: none;
+        font-size: 20px;
+        opacity: 1;
+        font-family: 'Roboto';
+        font-weight: 500;
+    }
+    .forgotdesign {
+        color: #ADADAD;
+        font-size: 20px;
+        margin-top: 27px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        margin-bottom: 0px!important;
+    }
+
+    .bottommostparagraphdesign {
+        font-size: 20px;
+        color: rgb(173, 173, 173);
+        margin-top: 14px;
+        margin-left: 80px;
+        font-family: Roboto;
+        font-weight: 400;
+        margin-bottom: 0px !important;
+    }
+    .imagelogodesign {
+        margin-left: 80px;
+        width: 185px;
+        height: 43px;
+    }
+    .form-control
+    {
+        font-size: 20px!important;
+        margin-left: 80px;
+    }   
+    .form-control {
+        width: 429px !important;
+        height: 49px;
+     
+        margin-top: 18px;
+        border: 1px solid #ADADAD!important;
+        border-radius: 5px!important;
+    }
+    .maincontainer
+    {
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    /* flex-wrap: wrap; */
+
+    }
+    .imagestyle {
+        border-radius: 50%;
+        box-shadow: 0px 4px 31px #0000000A;
+        border: 14px solid #FFFFFF;
+        width:400px; 
+        height:400px;
+    
+}
+}
+@media screen and (min-width:768px) and (max-width: 1023px) {
+    .bottomformflex {
+        width: 388px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .companycontentdesign {
+        margin-top: 7px;
+        letter-spacing: 0px;
+        font-size: 20px;
+        margin-left: 40px;
+        font-family: Roboto;
+        font-weight: 300;
+        margin-bottom: 0px !important;
+    }
+    .logintext {
+        margin-left: 40px;
+        font-size: 16px;
+        margin-top: 6px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        margin-bottom: 0px!important;
+    }
+    .buttondesign {
+        border-radius: 23px;
+        margin-left: 40px;
+        margin-top: 10px;
+        width: 130px;
+        height: 40px;
+        background: #C8242F;
+        color: #FFFFFF;
+        border: none;
+        font-size: 16px;
+        opacity: 1;
+        font-family: 'Roboto';
+        font-weight: 500;
+    }
+    .forgotdesign {
+        color: #ADADAD;
+        font-size: 16px;
+        margin-top: 20px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        margin-bottom: 0px!important;
+    }
+    .bottommostparagraphdesign {
+        font-size: 16px;
+        color: rgb(173, 173, 173);
+        margin-top: 9px;
+        margin-left: 40px;
+        font-family: Roboto;
+        font-weight: 400;
+        margin-bottom: 0px !important;
+    }
+    .imagelogodesign {
+        margin-left: 40px;
+        width: 130px;
+        height: 28px;
+    }
+    .form-control
+    {
+        font-size: 16px!important;
+        margin-left: 40px;
+    }   
+    .form-control {
+        width: 350px !important;
+        height: 40px;
+     
+        margin-top: 10px;
+        border: 1px solid #ADADAD!important;
+        border-radius: 5px!important;
+    }
+    .maincontainer
+    {
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    /* flex-wrap: wrap; */
+
+    }
+    .imagestyle {
+        border-radius: 50%;
+        box-shadow: 0px 4px 31px #0000000A;
+        border: 14px solid #FFFFFF;
+        width: 300px;
+        height: 300px;
+    }
+}
+@media screen and (min-width:360px) and (max-width:767px){
+    .rightcenter
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+    .centerimage
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .companycontentdesign {
+        margin-top: 7px;
+        letter-spacing: 0px;
+        font-size: 24px;
+
+        font-family: Roboto;
+        font-weight: 300;
+        margin-bottom: 0px !important;
+        margin-left: 0px;
+    }
+    .logintext {
+        margin-left: 0px;
+        font-size: 18px;
+        margin-top: 5px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        margin-bottom: 0px!important;
+    }
+    .forgotdesign {
+        color: #ADADAD;
+        font-size: 18px;
+        margin-top: 17px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        margin-bottom: 0px!important;
+        margin-left: 0px;
+    }
+    .buttondesign {
+        border-radius: 23px;
+        margin-left: 0px;
+        margin-top: 10px;
+        width: 110px;
+        height: 38px;
+        background: #C8242F;
+        color: #FFFFFF;
+        border: none;
+        font-size: 18px;
+        opacity: 1;
+        font-family: 'Roboto';
+        font-weight: 500;
+    }
+    .form-control {
+        width: 300px !important;
+        height: 49px;
+        margin-left: 0px;
+        margin-top: 5px;
+        border: 1px solid #ADADAD!important;
+        border-radius: 5px!important;
+    }
+    .imagelogodesign {
+    /* margin-left: 135px; */
+    width: 220px;
+    height: 48px;
+    margin-left: 0px;
+}
+    .maincontainer
+    {
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+
+    }
+    .imagestyle {
+        border-radius: 50%;
+        box-shadow: 0px 4px 31px #0000000A;
+        border: 14px solid #FFFFFF;
+        width: 300px;
+        height: 300px;
+        
+    }
+    .bottommostparagraphdesign {
+        font-size: 17px;
+        color: #ADADAD;
+        margin-top: 10px;
+        margin-left: 0px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        margin-bottom: 0px!important;
+    }
+    /* .mainimagediv
+    {
+        
+        width: 200px;
+        
+    } */
+    .rowdesign {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .bottomformflex {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

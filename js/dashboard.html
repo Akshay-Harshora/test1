@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/dashboardstyle.css">
+
+
+<body>
+    <script type = "text/javascript">
+        
+        let menustate = 0; 
+        function openclose()
+        {
+            let menu = document.getElementById("mysidebar");
+             let dashboard = document.getElementById("maindashboardid");
+             console.log(menu);
+        // console.log(menu.classList);
+     
+        if(menustate == 0)
+        {
+            menustate = 1;
+            if(menu.classList.contains("mysidebar2")|| dashboard.classList.contains("dashboard2"))
+            {
+                menu.classList.remove("mysidebar2");
+                dashboard.classList.remove("dashboard2");
+            }
+            menu.classList.add("mysidebar1");
+            dashboard.classList.add("dashboard1");
+        }
+        else
+        {
+            menustate = 0;
+            if(menu.classList.contains("mysidebar1")|| dashboard.classList.contains("dashboard1"))
+            {
+                menu.classList.remove("mysidebar1");
+                dashboard.classList.remove("dashboard1");
+            }
+            menu.classList.add("mysidebar2");
+            dashboard.classList.add("dashboard2");
+        }
+        }
+        
+        function openclose1()
+        {
+            let menu = document.getElementById("mysidebar");
+             let analysis = document.getElementById("maindashboardid");
+             console.log(menu);
+        // console.log(menu.classList);
+     
+       
+            if(menu.classList.contains("mysidebar2")|| analysis.classList.contains("dashboard2"))
+            {
+                menu.classList.remove("mysidebar2");
+                analysis.classList.remove("dashboard2");
+            }
+            menu.classList.add("mysidebar1");
+            analysis.classList.add("dashboard1");
+        
+     
+    }
+    </script>
+    <div class="topnavbar">
+        <div class="topleftnavbar">
+            <a onclick="openclose()" style="cursor: pointer;"><img src="../images/menu-bar.svg" class="menudesign" width="30px" height="24px"></a>
+            <img src="../images/logo.svg" alt="logo" class="logo" >
+            <img src="../images/mobile-header-logo.svg" alt="logo" class="logo-mobile" style="display: none;">
+            <img src="../images//search-icon.svg" class="searchicon">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Search" class="search-control" width = "49px" height="21px">
+
+
+        </div>
+        <div class="toprightnavbar">
+            <div class="dropdown" >
+                <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" style="border:none;background-color: #FFFF;width: 26px;height: 26px;">
+                    <img src="../images/notification-icon.svg" class="notification">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Akshay Harshora</a></li>
+              
+                </ul>
+            </div>
+            <img src="../images/profile.png" class="profile">
+            <select class="dropdesign">
+                <option value="John Doe">John Doe</option>
+            </select>
+
+        </div>
+    </div>
+
+    <div class="sidebar" id = "mysidebar">
+        <div class="eachsidemenu" style="padding-top: 17px;" id = "dashmenu"><a href="#" class="link">
+                <div style="background-color:#FFF3F4;padding:15px;margin-left: 30px;margin-right:30px;display: flex;" id = "dashlink">
+                    <img src="../images/dashboard-active.svg" width="16px" height="16px" style="margin-top: 3px;"><span
+                        style="margin-left: 12px;color:#C8242F;">Dashboard</span></div>
+            </a></div>
+        <div class="eachsidemenu" style="padding-top:17px;" id = "analysismenu"><a href="../js/analysis.html" class="link" target="_top">
+                <div style="display: flex;"><img src="../images/graph-default.svg" width="16px" height="16px"
+                        style="margin-left: 47px;margin-top: 2px"><span style="margin-left: 12px;">Analysis</span></div>
+            </a></div>
+        <div class="eachsidemenu"><a href="#" class="link">
+                <div style="display: flex;"><img src="../images/inbox-default.svg" width="16px" height="16px"
+                        style="margin-left: 47px;margin-top: 3px;"><span style="margin-left: 12px;">Inbox</span></div>
+            </a></div>
+        <div class="eachsidemenu"><a href="#" class="link">
+                <div style="display: flex;"><img src="../images/clock-default.svg" width="16px" height="16px"
+                        style="margin-left: 47px;margin-top: 2.6px;"><span style="margin-left: 12px;">History</span></div>
+            </a></div>
+        <div class="eachsidemenu"><a href="#" class="link">
+                <div style="display: flex;"><img src="../images//user-default.svg" width="16px" height="16px"
+                        style="margin-left: 47px;margin-top: 2px;"><span style="margin-left: 12px;">Users</span></div>
+            </a></div>
+        <div class="eachsidemenu"><a href="#" class="link">
+                <div style="display: flex;"><img src="../images/maintenance-default.svg" width="16px" height="16px"
+                        style="margin-left: 47px;margin-top: 2px;"><span style="margin-left: 12px;">Maintenance</span></div>
+            </a></div>
+        <div class="eachsidemenu"><a href="#" class="link">
+                <div style="display: flex;"><img src="../images/setting-default.svg" width="16px" height="16px"
+                        style="margin-left: 47px;margin-top: 2px;"><span style="margin-left: 12px;">Setting</span></div>
+            </a></div>
+    </div>
+   <a onclick="openclose1()"> <div class="maindashboard" id = "maindashboardid">
+        <p class="dash">Dashboard</p>
+        <div class="cards">
+            <div class="card1">
+                <div style="display: flex;display: flex;align-items: center;justify-content: center;">
+                    <div style="display: flex;">
+                        <img src="../images/star.svg" style="margin-bottom: 1px;">
+                        <div style="margin-left: 20px;">
+                            <p class="bigfont">23,456</p>
+                            <p class="smallfont">New Products</p>
+                        </div>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card2">
+                <div style="display: flex;align-items: center;justify-content: center;">
+                    <div style="display: flex;">
+                        <img src="../images/new-product.svg" style="margin-top: 1px;">
+                        <div style="margin-left: 20px;">
+                            <p class="bigfont">2345</p>
+                            <p class="smallfont">Added Products</p>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="card3">
+                <div style="display: flex;align-items: center;justify-content: center;">
+                    <div style="display: flex;">
+                        <img src="../images/total-product.svg" width="36px" height="36px" style="margin-top: 13px;">
+                        <div style="margin-left: 20px;">
+                            <p class="bigfont">32,456</p>
+                            <p class="smallfont">Total Products</p>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="card4">
+                <div style="display: flex;align-items: center;justify-content: center;">
+                    <div style="display: flex;">
+                        <img src="../images/dollar-filled.svg">
+                        <div style="margin-left: 20px;">
+                            <p class="bigfont">5678</p>
+                            <p class="smallfont">Today's Sale</p>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="card5">
+                <div style="display: flex;align-items: center;justify-content: center;">
+                    <div style="display: flex;">
+                        <img src="../images/money-bag.svg">
+                        <div style="margin-left: 20px;">
+                            <p class="bigfont">33,5342</p>
+                            <p class="smallfont">Total Sale</p>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+         <div class="graph">
+            <div class="leftgraph">
+                <div style="display: flex;justify-content: space-between;">
+                    <div>
+                            <p class = "styleforsale">Sale</p>
+                    </div>
+                    <div>
+                        <div style="display: flex;">
+                            <a href = "#" class = "time" id = "w"><p style="padding-top: 23px;font-size:12px;margin-bottom: 27px!important;">Weekly</p></a>
+                            <a href = "#" class = "time" id = "m"><p style="padding-top: 23px;font-size:12px;margin-bottom: 27px!important;">Monthly</p></a>
+                            <a href = "#" class = "time" id = "y"><p style="padding-top: 23px;font-size:12px;color:#C8242F;margin-bottom: 27px!important;">Yearly</p></a>
+                        </div>
+                    </div>
+                </div>
+                <img src="../images/data-graph.png" class = "dataimage">
+            </div>
+            
+            <div class="rightgraph">
+              <div class="rightcenter">
+                <p class = "styleforcountry">Sales by Country</p>
+                <div style="display: flex;align-items: center;justify-content: center;">
+                <img src="../images/pie-chart.svg" class = "piechart">
+                </div>
+                <div class="color1">
+                    <div class="color-cont1">
+                        <div style="display: flex;">
+                        <div class="r"></div>
+                        <div class="n1">United States of America</div>
+                        </div>
+                        <div style="display: flex;">
+                        <div class="g"></div>
+                        <div class="n2">Canada</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color2">
+                    <div class="color-cont2">
+                        <div style="display: flex;">
+                        <div class="o"></div>
+                        <div class="n3">Russia</div>
+                        </div>
+                        <div style="display: flex;">
+                        <div class="y"></div>
+                        <div class="n4">India</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            <div class = "tabledata table-responsive">
+                <div style="display: flex;justify-content: space-between;">
+                    
+                <p class = "styleforinvoices">Invoices</p>
+                <p style="margin-bottom: 0px!important;padding-right: 30px;
+                padding-top: 23px;" class = "viewall"><a style="text-decoration: none;color:#C8242F">view all</a></p>
+                </div>
+            <table class="table" id="tab" style="margin-left: 40px;margin-right: 40px;">
+                <thead>
+                    <tr>
+                        <th scope="col" class="tablefirst">INVOICE</th>
+                        <th scope="col" class="tablefirst">COMPANY NAME</th>
+                        <th scope="col" class="tablefirst">EMAIL</th>
+                        <th scope="col" class="tablefirst">DUE DATE</th>
+                        <th scope="col" class="tablefirst">STATUS</th>
+                        <th scope="col"  class="tablefirst">AMOUNT</th>
+    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>651535</td>
+                        <td>Public Adjusting Firm</td>
+                        <td>georia.young@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td><button class = "btndesignpaid">Paid</button></td>
+                        <td>$47,800</td>
+    
+                    </tr>
+                    <tr>
+                        <td>558612</td>
+                        <td>Other</td>
+                        <td>jessica.hanson@example.com</td>
+                        <td>24 May, 2020</td>
+                        <td><button class = "btndesignpaid">Paid</button></td>
+                        <td>$98,000</td>
+                    </tr>
+                    <tr>
+                        <td>558612</td>
+                        <td>Vendor</td>
+                        <td>alma.lawson@example.com</td>
+                        <td>8 Sep, 2020</td>
+                        <td><button class = "btndesignpaid">Paid</button></td>
+                        <td>$20,900</td>
+                    </tr>
+                    <tr>
+                        <td>558612</td>
+                        <td>Property Management Company</td>
+                        <td>kenzi.lawson@example.com</td>
+                        <td>22 Oct, 2020</td>
+                        <td><button class = "btndesignpaid">Paid</button></td>
+                        <td>$10,570</td>
+                    </tr>
+                    <tr>
+                        <td>651535</td>
+                        <td>Subcontractor Company</td>
+                        <td>jackson.graham@example.com</td>
+                        <td>1 Feb, 2020</td>
+                        <td><button class = "btndesignfail">Failed</button></td>
+                        <td>$10,200</td>
+                    </tr>
+                    <tr>
+                        <td>653518</td>
+                        <td>Mortgage Company</td>
+                        <td>felicia.reid@example.com</td>
+                        <td>22 Oct, 2020</td>
+                        <td><button class = "btndesignpending">Pending</button></td>
+                        <td>$12,600</td>
+                    </tr>
+                    <tr>
+                        <td>487441</td>
+                        <td>TPA</td>
+                        <td>dolores.chambers@example.com</td>
+                        <td>21 Sep, 2020</td>
+                        <td><button class = "btndesignpaid">Paid</button></td>
+                        <td>$11,170</td>
+                    </tr>
+                    <tr>
+                        <td>267400</td>
+                        <td>Fire Department</td>
+                        <td>nevaeh.simmons@example.com</td>
+                        <td>17 Oct, 2020</td>
+                        <td><button class = "btndesignfail">Failed</button></td>
+                        <td>$28,000</td>
+                    </tr>
+                    <tr>
+                        <td>449003</td>
+                        <td>Insurance Carrier</td>
+                        <td>curtis.weaver@example.com</td>
+                        <td>21 Sep, 2020</td>
+                        <td><button class = "btndesignpending">Pending</button></td>
+                        <td>$10,000</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div> </a>
+        
+        
+
+     
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
